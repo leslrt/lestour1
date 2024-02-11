@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #fff0f6;
+  font-family: "Protest Riot", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.cat-img {
+  width: 30rem;
+  height: 30rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3.6rem;
+  color: #f53699;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+.btn {
+  padding: 1.5rem 2.5rem;
+  border: none;
+  border-radius: 4px;
+
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn--yes {
+  background-color: #40c057;
+}
+
+.btn--no {
+  background-color: #f03e3e;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Your existing CSS styles */
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* Center the modal vertically */
+  padding: 7px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+  max-width: 250px; /* Limit the maximum width of the modal */
+  width: 80%; /* Take up 80% of the available width */
+  text-align: center;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+}
+
+.modal-content button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Additional styles for the confirmation button */
+#confirmButton {
+  background-color: pink; /* Green background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Add smooth transition effect */
+}
+
+#confirmButton:hover {
+  background-color: palevioletred; /* Darker green color on hover */
+}
+
+/* Additional styles to make the modal responsive */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%; /* Take up 90% of the available width on smaller screens */
+  }
+}
+
+.put {
+  color: deeppink;
+}

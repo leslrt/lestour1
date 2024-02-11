@@ -1,0 +1,124 @@
+.body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heart {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    width: 300px; /* Adjust size as needed */
+    height: 300px; /* Adjust size as needed */
+}
+
+.mail {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+    background-color: pink;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    width: 300px;
+    z-index: 2; /* Set a higher z-index for the mail */
+}
+
+.mail.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    animation: bounce 0.6s ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.letter {
+    font-family: 'Comic Sans MS', cursive;
+}
+
+.letter h2 {
+    margin-top: 0;
+}
+
+.letter p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline from the link */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Add smooth transition effect */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+
+.audio {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed to position it lower from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: #f0f0f0;
+    padding: -500px;
+    border-radius: 3px;
+    z-index: 1; /* Set a lower z-index for the audio */
+}
+
+.hidden {
+    display: none;
+}
+
+.play {
+    position: absolute;
+    bottom: 55px; /* Adjust as needed to position it lower from the bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+
+    padding: -500px;
+    border-radius: 3px;
+}
+
+.click-heart {
+    text-align: center;
+    margin-top: 80px;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+
