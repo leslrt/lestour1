@@ -23,9 +23,7 @@ noButton.addEventListener("click", function () {
         changeImage(imageIndex);
         resizeYesButton();
         updateNoButtonText();
-        if (noCount === MAX_IMAGES) {
-            play = false;
-        }
+        checkLastMessageDisplayed();
     }
 });
 
@@ -77,4 +75,28 @@ function changeImage(image) {
 function updateNoButtonText() {
     noButton.innerHTML = generateMessage(noCount);
 }
+
+function checkLastMessageDisplayed() {
+    if (noCount === MAX_IMAGES) {
+        addNoButtonHoverEffect();
+    }
+}
+
+function addNoButtonHoverEffect() {
+    noButton.addEventListener("mouseover", () => {
+        const noBtnRect = noButton.getBoundingClientRect();
+        const maxX = window.innerWidth - noBtnRect.width;
+        const maxY = window.innerHeight - noBtnRect.height;
+
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        noButton.style.left = randomX + "px";
+        noButton.style.top = randomY + "px";
+    });
+}
+
+
+
+
 
